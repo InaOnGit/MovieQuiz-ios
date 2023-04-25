@@ -28,6 +28,7 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
         presenter = MovieQuizPresenter(viewController: self)
     }
     
+    // MARK: - Actions
     @IBAction private func yesButtonClicked(_ sender: UIButton) {
         presenter.yesButtonClicked()
     }
@@ -36,6 +37,7 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
         presenter.noButtonClick()
     }
     
+    // MARK: - Private functions
     func show(quiz step: QuizStepViewModel) {
         imageView.layer.borderColor = UIColor.clear.cgColor
         imageView.image = step.image
